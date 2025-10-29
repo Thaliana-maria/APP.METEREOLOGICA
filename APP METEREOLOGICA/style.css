@@ -1,0 +1,218 @@
+body {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+  background-color: #0e1117;
+  color: #e3f2fd;
+  display: flex;
+}
+
+/* --- SIDEBAR --- */
+.sidebar {
+  background-color: #0d47a1;
+  width: 80px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 0;
+}
+
+.sidebar .logo {
+  font-size: 1.8em;
+  color: #fff;
+}
+
+.sidebar nav a {
+  display: block;
+  margin: 20px 0;
+  color: #b3e5fc;
+  font-size: 1.5em;
+  text-decoration: none;
+}
+
+.sidebar nav a:hover {
+  color: white;
+  transform: scale(1.2);
+}
+
+.logout {
+  background: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-size: 1em;
+}
+
+/* --- DASHBOARD --- */
+.dashboard {
+  flex: 1;
+  padding: 30px;
+}
+
+header h1 {
+  text-align: center;
+  color: #64b5f6;
+  margin-bottom: 30px;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 25px;
+}
+
+/* --- CARD GENERAL --- */
+.card {
+  background-color: #1e1f26;
+  border-radius: 15px;
+  padding: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+
+.card:hover {
+  transform: scale(1.02);
+}
+
+/* --- CALENDARIO --- */
+.calendar-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 10px;
+}
+
+.calendar-header button {
+  background-color: #1976d2;
+  border: none;
+  color: white;
+  padding: 5px 10px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.calendar-header button:hover {
+  background-color: #42a5f5;
+}
+
+#calendar {
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  gap: 5px;
+}
+
+.day {
+  background-color: #1976d2;
+  padding: 10px 0;
+  border-radius: 10px;
+  text-align: center;
+  transition: background 0.3s;
+  font-weight: 450;
+}
+
+.day:hover {
+  background-color: #42a5f5;
+}
+
+.day.header {
+  background: none;
+  color: #90caf9;
+  font-weight: bold;
+  cursor: default;
+}
+
+.today {
+  background-color: #fff;
+  color: #000;
+  font-weight: bold;
+}
+
+/* --- CONVERSOR --- */
+.conversor {
+  text-align: center;
+}
+
+.conversor .icono {
+  font-size: 2.5em;
+  margin-bottom: 10px;
+}
+
+.conversor select,
+.conversor input {
+  width: 80%;
+  margin: 8px 0;
+  padding: 8px;
+  border: none;
+  border-radius: 8px;
+  outline: none;
+  text-align: center;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Botón debajo del input */
+.conversor button {
+  display: block;
+  width: 50%;
+  margin: 12px auto 0 auto;
+  background-color: #1976d2;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background 0.3s;
+}
+
+.conversor button:hover {
+  background-color: #42a5f5;
+}
+
+#resultado {
+  font-size: 1.2em;
+  margin-top: 15px;
+  color: #64b5f6;
+}
+
+/* --- CONFIGURACIÓN --- */
+.config .circle {
+  background-color: #0d47a1;
+  border-radius: 50%;
+  width: 150px;
+  height: 150px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.config h1 {
+  margin: 0;
+  font-size: 2.5em;
+  color: #fff;
+}
+
+.config ul {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+  text-align: left;
+}
+
+.config li {
+  margin: 8px 0;
+  font-size: 1em;
+}
+
+/* --- RESPONSIVO --- */
+@media (max-width: 768px) {
+  .grid-container {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    width: 60px;
+  }
+}

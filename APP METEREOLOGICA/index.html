@@ -1,0 +1,72 @@
+<!DOCTYPE html> 
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Controlador TempSmart</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <main class="dashboard">
+    <header>
+      <h1>Controlador TempSmart</h1>
+    </header>
+
+    <section class="grid-container">
+      <!-- CALENDARIO -->
+      <div class="card calendar">
+        <h2>Calendario de Temperaturas</h2>
+        <div class="calendar-header">
+          <button id="prevMonth">◀</button>
+          <span id="monthYear"></span>
+          <button id="nextMonth">▶</button>
+        </div>
+        <div id="calendar"></div>
+      </div>
+      <!-- GRÁFICA -->
+      <div class="card chart">
+        <h2>Tendencias de temperatura</h2>
+        <canvas id="tempChart"></canvas>
+      </div>
+
+      <!-- CONVERSOR -->
+      <div class="card conversor">
+        <h2>Conversor de Temperatura</h2>
+        <div class="icono">🌡️</div>
+
+        <label for="tipo">Tipo de conversión:</label>
+        <select id="tipo">
+          <option value="CtoF">Celsius → Fahrenheit</option>
+          <option value="FtoC">Fahrenheit → Celsius</option>
+          <option value="CtoK">Celsius → Kelvin</option>
+          <option value="KtoC">Kelvin → Celsius</option>
+        </select>
+
+        <label for="valor"></label>
+        <input type="number" id="valor" placeholder="Ej: 25">
+
+        <button onclick="convertir()">Convertir</button>
+        <p id="resultado"></p>
+      </div>
+
+      <!-- CONFIGURACIÓN -->
+      <div class="card config">
+        <h2>Configuración actual</h2>
+        <div class="circle">
+          <h1 id="temperature">21°C</h1>
+          <p id="city">Cali</p>
+        </div>
+        <ul>
+          <li>⚙️ Automático</li>
+          <li>🕒 <span id="time"></span></li>
+          <li>💬 Soporte</li>
+        </ul>
+      </div>
+    </section>
+  </main>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+  <script src="script.js"></script>
+</body>
+</html>
